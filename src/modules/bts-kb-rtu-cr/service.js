@@ -84,7 +84,7 @@ export class Service extends RestService {
     return super.get(endpoint);
   }
   getDestinations() {
-    var module = 'bts-KB/RTU';
+    var module = 'EFR-KB/RTU';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/destination?keyword=${module}`;
@@ -92,7 +92,7 @@ export class Service extends RestService {
   }
 
   getSources() {
-    var module = 'bts-KB/RTU';
+    var module = 'EFR-KB/RTU';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/source?keyword=${module}`;

@@ -36,7 +36,7 @@ export class Service extends RestService {
 
   getSPKByPackingList(packingList) {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("merchandiser").client.baseUrl + 'docs/BTS--pk/received?keyword=' + packingList;
+    var endpoint = config.getEndpoint("merchandiser").client.baseUrl + 'docs/BTS-pk/received?keyword=' + packingList;
     return super.get(endpoint);
   }
 
@@ -48,7 +48,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=BTS--KB/RTP';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=BTS-KB/RTP';
     return super.get(endpoint);
   }
 
@@ -83,7 +83,7 @@ export class Service extends RestService {
     return super.get(endpoint);
   }
   getDestinations() {
-    var module = 'bts-KB/RTP';
+    var module = 'EFR-KB/RTP';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/destination?keyword=${module}`;
@@ -91,7 +91,7 @@ export class Service extends RestService {
   }
 
   getSources() {
-    var module = 'bts-KB/RTP';
+    var module = 'EFR-KB/RTP';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/source?keyword=${module}`;

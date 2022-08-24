@@ -12,7 +12,7 @@ export class Pending {
       keyword: '',
       filter: JSON.stringify ({
         "IsReceived": false,
-        'PackingList.Contains("BTS--FN") || Reference.Contains("BTS--KB/RTP")': "true",
+        'PackingList.Contains("BTS-FN") || Reference.Contains("BTS-KB/RTP")': "true",
       })
     };
     keyword = '';
@@ -29,7 +29,7 @@ export class Pending {
     // }
 
     async activate() {
-        //this.info.keyword = 'BTS--FN';
+        //this.info.keyword = 'BTS-FN';
         var result = await this.service.listPending(this.info);
         console.log(result.data);
         var resultWithReference = await result.data.map(item => {
