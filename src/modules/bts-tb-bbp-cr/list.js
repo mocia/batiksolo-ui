@@ -45,7 +45,7 @@ export class List {
           keyword: info.search,
           order: order,
           filter: JSON.stringify ({
-            'Reference.Contains("BTS--FN") || Reference.Contains("BTS--KB/PLR")': "true",
+            'Reference.Contains("BTS-FN") || Reference.Contains("BTS-KB/PLR")': "true",
             'DestinationCode.Contains("GDG.05")': "false"
           })
       };

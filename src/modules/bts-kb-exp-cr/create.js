@@ -48,9 +48,9 @@ export class Create {
                 this.list();
             })
             .catch(e => {
-                alert('Terjadi Kesalahan.Cek Inputan yang belum diisi');
-                 
                 console.log(e);
+                alert('Terjadi Kesalahan.Cek Inputan yang belum diisi');
+              
                 // for (var item of e.items) {
                 //     for (var d of item.details) {
                 //         this.error =d; 
