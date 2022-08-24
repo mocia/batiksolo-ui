@@ -39,7 +39,7 @@ export class List {
         { field: 'isDraft', title: 'Status' }
     ];
 
-    
+
     loader = (info) => {
         var order = {};
         
@@ -70,6 +70,7 @@ export class List {
                     total: result.info.total,
                     data: result.data
                 };
+                
             });
         
     };
