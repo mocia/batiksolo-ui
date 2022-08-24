@@ -4,9 +4,9 @@ import { RestService } from '../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-//const serviceUri = 'docs/efr-kb-rtp';
-const serviceUri = 'stores/BTS--kb-rtp';
-const serviceSearch = 'docs/efr-pk-pbj/submitted';
+//const serviceUri = 'docs/bts-kb-rtp';
+const serviceUri = 'stores/bts-kb-rtp';
+const serviceSearch = 'docs/bts-pk-pbj/submitted';
 
 export class Service extends RestService {
 
@@ -83,7 +83,7 @@ export class Service extends RestService {
     return super.get(endpoint);
   }
   getDestinations() {
-    var module = 'EFR-KB/RTP';
+    var module = 'bts-KB/RTP';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/destination?keyword=${module}`;
@@ -91,7 +91,7 @@ export class Service extends RestService {
   }
 
   getSources() {
-    var module = 'EFR-KB/RTP';
+    var module = 'bts-KB/RTP';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/source?keyword=${module}`;

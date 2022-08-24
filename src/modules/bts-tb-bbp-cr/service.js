@@ -2,7 +2,7 @@ import { inject, Lazy } from 'aurelia-framework';
 import { HttpClient } from 'aurelia-fetch-client';
 import { RestService } from '../../utils/rest-service';
 
-//const serviceUri = '/docs/efr-tb-bbp'; 
+//const serviceUri = '/docs/bts-tb-bbp'; 
 const serviceUriTransferIn = 'transfer-in';
 const serviceUriSPK = 'pkpbj/by-user'
 const serviceUriSPKPending = 'pkpbj/by-user/packingRTP'

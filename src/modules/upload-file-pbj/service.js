@@ -18,7 +18,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-PK/PLB';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=bts-PK/PLB';
     return super.get(endpoint);
   }
 
@@ -39,7 +39,7 @@ export class Service extends RestService {
   //}
 
   getDestinations() {
-    var module = 'EFR-PK/PBJ';
+    var module = 'BTS-PK/PBJ';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/destination?keyword=${module}`;
@@ -47,7 +47,7 @@ export class Service extends RestService {
   }
 
   getSources() {
-    var module = 'EFR-PK/PBJ';
+    var module = 'BTS-PK/PBJ';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/source?keyword=${module}`;

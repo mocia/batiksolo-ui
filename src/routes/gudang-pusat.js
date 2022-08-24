@@ -26,9 +26,9 @@ module.exports = [
     //     }
     // },
     {
-        route: 'efr-tb-bbp',
-        name: 'efr-tb-bbp',
-        moduleId: './modules/efr-tb-bbp-cr/index',
+        route: 'bts-tb-bbp',
+        name: 'bts-tb-bbp',
+        moduleId: './modules/bts-tb-bbp-cr/index',
         nav: true,
         title: 'Pemasukan Barang',
         auth: true,
@@ -76,9 +76,9 @@ module.exports = [
         }
     },
     {
-        route: 'efr-kb-exp',
-        name: 'efr-kb-exp',
-        moduleId: './modules/efr-kb-exp-cr/index',
+        route: 'bts-kb-exp',
+        name: 'bts-kb-exp',
+        moduleId: './modules/bts-kb-exp-cr/index',
         nav: true,
         title: 'Distribusi Barang ke Ekspedisi',
         auth: true,
@@ -89,9 +89,9 @@ module.exports = [
         }
     },
     {
-        route: 'efr-kb-rtu',
-        name: 'efr-kb-rtu',
-        moduleId: './modules/efr-kb-rtu-cr/index',
+        route: 'bts-kb-rtu',
+        name: 'bts-kb-rtu',
+        moduleId: './modules/bts-kb-rtu-cr/index',
         nav: true,
         title: 'Retur Barang Ke Unit',
         auth: true,

@@ -4,7 +4,7 @@ import { RestService } from '../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-const serviceUri = '/docs/efr-pk-pbj';
+const serviceUri = '/docs/bts-pk-pbj';
 
 export class Service extends RestService {
   constructor(http, aggregator, config, api) {
@@ -18,7 +18,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-PK/PBJ';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=bts-PK/PBJ';
     return super.get(endpoint);
   }
 
@@ -29,7 +29,7 @@ export class Service extends RestService {
   }
 
   getById(id) {
-    var endpoint = '/docs/efr-pk-pbj/draft/' + id;
+    var endpoint = '/docs/bts-pk-pbj/draft/' + id;
     return super.get(endpoint);
   }
 

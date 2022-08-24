@@ -5,7 +5,7 @@ import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api";
 
 const serviceUri = 'pkpbj/by-user';
-const servicePrintUri = 'docs/print/efr-pk-pbj';
+const servicePrintUri = 'docs/print/bts-pk-pbj';
 
 export class Service extends RestService {
 
@@ -35,7 +35,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-PK/PLB';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=bts-PK/PLB';
     return super.get(endpoint);
   }
 

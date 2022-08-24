@@ -4,10 +4,10 @@ import { RestService } from '../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api";
 
-//const serviceUri = 'docs/efr-pk-pbj';
+//const serviceUri = 'docs/bts-pk-pbj';
 const serviceUri = 'pkpbj/by-user'
 const serviceInven = 'inventory';
-const servicePrintUri = 'docs/print/efr-pk-pbj';
+const servicePrintUri = 'docs/print/bts-pk-pbj';
 
 export class Service extends RestService {
 
@@ -39,7 +39,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-PK/PLB';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=bts-PK/PLB';
     return super.get(endpoint);
   }
 
@@ -51,7 +51,7 @@ export class Service extends RestService {
 
 
   getDestinations() {
-    var module = 'EFR-PK/PLB';
+    var module = 'BTS-PK/PLB';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/destination?keyword=${module}`;
@@ -59,7 +59,7 @@ export class Service extends RestService {
   }
 
   getSources() {
-    var module = 'EFR-PK/PLB';
+    var module = 'BTS-PK/PLB';
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("master");
     var uri = `master/storages/source?keyword=${module}`;
