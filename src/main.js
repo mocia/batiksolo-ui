@@ -30,11 +30,11 @@ export async function configure(aurelia) {
         },
       };
 
-      var auth = "https://com-batiksolo-service-auth-dev.azurewebsites.net/v1/";
-      var master = "https://com-batiksolo-service-core-dev.azurewebsites.net/v1/";
-      var inventory = "https://com-batiksolo-service-warehouse-dev.azurewebsites.net/v1/";
-      var merchandiser = "https://com-batiksolo-service-warehouse-dev.azurewebsites.net/v1/";
-      var sales = "https://com-batiksolo-service-pos-dev.azurewebsites.net/v1/";
+      var auth = "https://com-batiksolo-service-auth-uat.azurewebsites.net/v1/";
+      var master = "https://com-batiksolo-service-core-uat.azurewebsites.net/v1/";
+      var inventory = "https://com-batiksolo-service-warehouse-uat.azurewebsites.net/v1/";
+      var merchandiser = "https://com-batiksolo-service-warehouse-uat.azurewebsites.net/v1/";
+      var sales = "https://com-batiksolo-service-pos-uat.azurewebsites.net/v1/";
       //Config API
       config.registerEndpoint("auth", auth);
       config.registerEndpoint("master", master);
