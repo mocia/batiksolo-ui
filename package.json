@@ -29,7 +29,7 @@
     "prebuild:dev": "npm run clean:dist",
     "build:dev": "cross-env NODE_ENV=development npm run webpack -- --progress --profile",
     "prebuild:prod": "npm run clean:dist",
-    "build:prod": "cross-env NODE_ENV=production npm run webpack -- --progress --profile",
+    "build:prod": "cross-env NODE_OPTIONS=--max_old_space_size=4096 NODE_ENV=production npm run webpack -- --progress --profile",
     "start": "npm run server:dev",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development npm run webpack-dev-server -- --inline --progress --profile --watch",
@@ -68,10 +68,8 @@
     }
   },
   "dependencies": {
-    "apparel-sorter": "0.2.1",
     "aurelia-api": "^3.1.0",
     "aurelia-authentication": "^3.1.0",
-    "aurelia-binding": "^2.1.1",
     "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper-webpack": "^1.1.0",
     "aurelia-dialog": "1.0.0-beta.3.0.1",
@@ -79,6 +77,7 @@
     "aurelia-event-aggregator": "^1.0.0",
     "aurelia-fetch-client": "^1.0.1",
     "aurelia-framework": "^1.0.7",
+    "aurelia-google-analytics": "^2.5.0",
     "aurelia-history-browser": "^1.0.0",
     "aurelia-loader": "1.0.0",
     "aurelia-loader-webpack": "^1.0.3",
@@ -97,7 +96,7 @@
     "file-saver": "1.3.3",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
-    "jquery": "^3.1.1",
+    "jquery": "^3.6.0",
     "jsx": "^0.9.89",
     "jwt-decode": "^2.1.0",
     "moment": "2.19.3",
@@ -107,10 +106,10 @@
     "react": "15.4.1",
     "react-autosuggest": "7.0.2",
     "react-bootstrap": "0.30.7",
-    "react-bootstrap-typeahead": "^5.1.2",
     "react-dom": "15.4.1",
     "react-dynamic-number": "1.4.5",
-    "xlsx": "^0.13.0"
+    "underscore": "^1.13.1",
+    "xlsx": "^0.17.1"
   },
   "devDependencies": {
     "@easy-webpack/config-aurelia": "^2.2.2",
